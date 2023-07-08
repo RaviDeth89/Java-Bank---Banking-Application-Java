@@ -1,4 +1,4 @@
-# ZZZ_Project_Banking_System
+# Java_Project_Banking_System
 
 •	JAVA: -   "JAVA BANK” - Banking Web-Application
 o	Java, Filters, JSP as well as JSTL, MySQL Database, HTML, CSS
