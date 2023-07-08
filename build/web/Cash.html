@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cash Withdrawal</title>
+        <link rel="icon" href="Images/Java_logo_001.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="index-styles.css" rel="stylesheet" />
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                background: url('Images/blue-background.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+                font-size: 1em;      
+            }
+            * {box-sizing: border-box}
+            .container2 {
+                width: 80%;
+                margin: 0 auto;
+                margin-left: 50%;
+                margin-right: 50%;
+            }
+            .container1 {
+                width: 55%;
+                margin: 0 auto;
+                margin-left: 33%;
+                margin-right: 50%;
+            }
+            h2{
+                margin-top: 10%;
+            }
+            table {
+                  border: 2px solid #ccc;
+                  border-collapse: collapse;
+                  margin: 0;
+                  padding: 0;
+                  width: 60%;
+                  table-layout: fixed;
+                }
+
+                table caption {
+                  font-size: 1.5em;
+                  margin: .5em 0 .75em;
+                }
+
+                table tr {
+                  background-color: #f8f8f8;
+                  border: 1px solid #ddd;
+                  padding: .35em;
+                }
+
+                table th,
+                table td {
+                  padding: .625em;
+                  text-align: center;
+                }
+
+                table th {
+                  font-size: .85em;
+                  letter-spacing: .1em;
+                  text-transform: uppercase;
+                }
+
+                @media screen and (max-width: 600px) {
+                  table {
+                    border: 0;
+                  }
+
+                  table caption {
+                    font-size: 1.3em;
+                  }
+
+                  table thead {
+                    border: none;
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                  }
+
+                  table tr {
+                    border-bottom: 3px solid #ddd;
+                    display: block;
+                    margin-bottom: .625em;
+                  }
+
+                  table td {
+                    border-bottom: 1px solid #ddd;
+                    display: block;
+                    font-size: .8em;
+                    text-align: right;
+                  }
+
+                  table td::before {
+                    content: attr(data-label);
+                    float: left;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                  }
+
+                  table td:last-child {
+                    border-bottom: 0;
+                  }
+                }
+                .btn{
+                    background-color: #badce3;
+                    border-color: gray;
+                }
+                .btn:hover{
+                    background-color: #17a98c;
+                }
+                .right {
+                position: absolute;
+                right: 10px;
+                top: 125px;
+                display: inline-block;
+                }
+                .left {
+                position: absolute;
+                left: 10px;
+                top: 125px;
+                display: inline-block;
+                }
+                img{
+                height: 380px;
+                width: 400px;
+                }
+              
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+		      <div class="container">
+			<a class="navbar-brand" href="#page-top">JAVA BANK</a>
+			<button
+				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+				type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				Menu <i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout_servlet">Log out</a></li>
+				</ul>
+			</div>
+                    </div>
+        </nav>
+        
+        <div class="left">
+            <img src="Images/Rupees-logo-003.png">   
+        </div>
+        <div class="right">
+            <img src="Images/Rupees-logo-005.jpg">   
+        </div>
+        
+                    
+        <h2 align="center">Cash Withdrawal &#128179;</h2><br>
+        <div class="container1">
+        <form action="cash.jsp" method="post">
+            <table>
+                <tr>
+                        <td>
+                            PIN : 
+                        </td>
+                        <td>
+                            <input type="password" name="pin" placeholder="Enter Your PIN"/>
+                        </td>
+                    </tr>   
+                <tr>
+                        <td>Amount (Rs.) : </td>
+                        <td><input type="text" name="bal" placeholder="Enter Amount"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit" name="btnAdd" class="btn">Enter</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+    </body>
+</html>

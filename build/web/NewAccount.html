@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="Images/Java_logo_001.png">
+        <title>New Account</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link href="index-styles.css" rel="stylesheet" />
+<style>
+    
+    body {
+          margin: 0px;
+          padding: 0px;
+          font-family: Arial, Helvetica, sans-serif;
+          background-size: cover;
+          background-attachment: fixed;
+          font-size: 1em;
+          color: black;
+    }
+    * {box-sizing: border-box}
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    .container1 {
+            width: 60%;
+            margin: auto;
+            margin-top: 10%;
+        }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border-color: gray;
+      background-color: #066173;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    button:hover {
+      background-color: lightseagreen;
+      opacity:1;
+    }
+
+    .resetbtn {
+      padding: 14px 20px;
+      color: black;
+      background-color: lightgray;
+    }
+
+    .resetbtn, .signupbtn {
+      width: 25%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
+</style>
+ </head>
+<body>
+    
+    <nav
+		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+		id="mainNav">
+		<div class="container">
+           
+			<a class="navbar-brand" href="#page-top">JAVA BANK</a>
+			<button
+				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+				type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				Menu <i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    
+    <div class="container1">
+        <form action="NewAccount.jsp" style="border:1px solid #ccc" method="post">
+            <div class="container">
+            <h1 align="center">&#127963; New Account &#128100;</h1>
+            <p align="center">Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="account_no"><b>Account Number</b></label>
+            <input type="text" placeholder="Account number (min 10 digit)" name="account_no" required/>
+            
+            <label for="full_name"><b>Full Name</b></label>
+            <input type="text" placeholder="Account holder name" name="full_name" required/>
+            
+            <label for="father_name"><b>Father's Name</b></label>
+            <input type="text" placeholder="Your father's name" name="father_name" required/>
+            
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Address" name="address" required/>
+            
+            <label for="city"><b>City</b></label>
+            <input type="text" placeholder="City" name="city" required/>
+            
+            <label for="state"><b>State</b></label>
+            <input type="text" placeholder="State" name="state" required/>
+            
+            <label for="pincode"><b>Pin code no.</b></label>
+            <input type="text" placeholder="Pin/Zip code (min 6 digit)" name="pincode" required/>
+            
+            <label for="aadhar_no"><b>Aadhar card no.</b></label>
+            <input type="text" placeholder="Aadhar card no. (min 10 digit)" name="aadhar_no" required/>
+            
+            <br><br>
+            <label for="dob"><b>Date Of Birth : </b></label>
+            <input type="Date" placeholder="Date of birth" name="dob" required/>
+            
+            <br><br><br>
+            <label for="age"><b>Age </b></label>
+            <input type="text" placeholder="your age (more than 10 years)" name="age" required/>
+            
+            <br><br>
+            <label for="gender"><b>Gender : </b></label><br>
+                <input type="radio" name="gender" value="Male" required/> Male
+                <input type="radio" name="gender" value="Female" required/> Female
+                <input type="radio" name="gender" value="Other" required/> Other
+            <br><br><br>
+            
+            <label for="mob_no"><b>Mobile no. (+91)</b></label>
+            <input type="text" placeholder="Mobile no. (min 10 digit)" name="mob_no" required/>
+            
+            <label for="email_id"><b>E-mail ID</b></label>
+            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example@gmail.com" placeholder="E-mail Id" name="email_id" required/>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$"
+                                   title="At least 1 Uppercase
+At least 1 Lowercase
+At least 1 Number
+At least 1 Symbol
+symbol allowed --> !@#$%^&*_=+-
+Min 8 chars and Max 20 chars"
+                                    placeholder="Create Password" name="password" required/>
+
+            <label for="password_repeat"><b>Repeat Password</b></label>
+            <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$"
+                                   title="At least 1 Uppercase
+At least 1 Lowercase
+At least 1 Number
+At least 1 Symbol
+symbol allowed --> !@#$%^&*_=+-
+Min 8 chars and Max 20 chars"
+                   placeholder="Repeat Password" name="password_repeat" required/>
+            <label>
+                <input type="checkbox" name="accept" style="margin-bottom:15px" required/>Accept all
+            </label>
+
+            <p>By creating an account you agree to our Terms & Privacy.</p>
+
+            <div class="clearfix">
+              <button type="submit" class="signupbtn">Register</button>
+              <button type="reset" class="resetbtn">Reset</button>
+            </div>
+          </div>
+    </form>
+</div>
+</body>
+</html>
